@@ -34,7 +34,8 @@ class _HomePageState extends State<HomePage> {
               trailing: Icon(Icons.add),
               leading: Icon(Icons.add),
             );
-          }).toList()
+          }).toList(),
+          Text("Hecho por el grupo g9")
         ],
       ),
     );
