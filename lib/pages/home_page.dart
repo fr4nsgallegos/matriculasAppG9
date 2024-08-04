@@ -7,7 +7,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // List<Map<String, dynamic>> personsList = [];
   List<PersonModel> personList = [];
 
   @override
@@ -15,15 +14,9 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // personsList.add({
-          //   "name": "Jhonny",
-          //   "institution": "TECSUP",
-          //   "direccion": "av 123 peru",
-          // });
-
           personList.add(
             PersonModel(
-              name: "Jhonny",
+              name: "Ana",
               address: "AV123",
             ),
           );
@@ -36,14 +29,6 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           Text("Las personas de mi aplicativo son;"),
-          // ...personsList.map((element) {
-          //   return ListTile(
-          //     title: Text(element["name"]),
-          //     subtitle: Text(element["institution"]),
-          //     trailing: Icon(Icons.add),
-          //     leading: Icon(Icons.add),
-          //   );
-          // }).toList(),
           ...personList.map((persona) {
             return ListTile(
               title: Text(persona.name),

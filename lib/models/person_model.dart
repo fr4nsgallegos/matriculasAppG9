@@ -13,7 +13,18 @@ class PersonModel {
 
 PersonModel persona1 = PersonModel(
   name: "JHONNY",
-  address: "ASDASDASD",
+  address: "av peru 123",
   dni: "1231320",
   nacionalidad: "Español",
+);
+
+PersonModel persona2 = PersonModel(
+  name: "Paula",
+  address: "av lima 123",
+  dni: "654654",
+);
+PersonModel persona3 = PersonModel(
+  name: "Maria",
+  address: "miraglores 123",
+  dni: "987654",
 );

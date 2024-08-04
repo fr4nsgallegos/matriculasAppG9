@@ -13,3 +13,10 @@ class InstitutionModel {
     required this.matriculas,
   });
 }
+
+InstitutionModel institucion1 = InstitutionModel(
+  nombre: "TECSUP",
+  direccion: "AV LIMA 654",
+  ruc: "1345678",
+  matriculas: [matricula1],
+);
