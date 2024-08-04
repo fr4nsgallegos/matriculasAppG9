@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:matriculasappg9/models/institution_model.dart';
+import 'package:matriculasappg9/models/matricula_model.dart';
 import 'package:matriculasappg9/models/person_model.dart';
 
 class HomePage extends StatefulWidget {
@@ -7,19 +9,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<PersonModel> personList = [];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          personList.add(
-            PersonModel(
-              name: "Ana",
-              address: "AV123",
-            ),
-          );
+          institucion1.matriculas.add(matricula2);
           setState(() {});
         },
       ),
@@ -28,11 +23,17 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
-          Text("Las personas de mi aplicativo son;"),
-          ...personList.map((persona) {
+          Text(
+            institucion1.nombre,
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          ...institucion1.matriculas.map((matricula) {
             return ListTile(
-              title: Text(persona.name),
-              subtitle: Text(persona.address),
+              title: Text(matricula.persona.name),
+              subtitle: Text(matricula.carrera.nombre),
               trailing: Icon(Icons.add),
               leading: Icon(Icons.add),
             );
