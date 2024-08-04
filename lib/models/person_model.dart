@@ -1,19 +1,22 @@
-class Person {
+class PersonModel {
   String name;
   String address;
   String? dni;
   String nacionalidad;
-  Person({
+  String institution;
+  PersonModel({
     required this.name,
     required this.address,
     this.dni,
     this.nacionalidad = "Peruan@",
+    required this.institution,
   });
 }
 
-Person persona1 = Person(
+PersonModel persona1 = PersonModel(
   name: "JHONNY",
   address: "ASDASDASD",
   dni: "1231320",
   nacionalidad: "Español",
+  institution: "TECSUP",
 );
