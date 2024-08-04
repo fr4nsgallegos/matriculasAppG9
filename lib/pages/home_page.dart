@@ -23,7 +23,9 @@ class _HomePageState extends State<HomePage> {
 
           personList.add(
             PersonModel(
-                name: "Jhonny", address: "AV123", institution: "TECSUP"),
+              name: "Jhonny",
+              address: "AV123",
+            ),
           );
           setState(() {});
         },
@@ -45,7 +47,7 @@ class _HomePageState extends State<HomePage> {
           ...personList.map((persona) {
             return ListTile(
               title: Text(persona.name),
-              subtitle: Text(persona.institution),
+              subtitle: Text(persona.address),
               trailing: Icon(Icons.add),
               leading: Icon(Icons.add),
             );
