@@ -75,7 +75,15 @@ class _HomePageState extends State<HomePage> {
                     return ListTile(
                       title: Text(matricula.persona.name),
                       subtitle: Text(matricula.carrera.nombre),
-                      trailing: Icon(Icons.edit),
+                      trailing: IconButton(
+                        icon: Icon(Icons.edit),
+                        onPressed: () {
+                          // matricula.persona.name = "LUCAS";
+                          matricula.persona = PersonModel(
+                              name: "Lucas2", address: "AV 12345678");
+                          setState(() {});
+                        },
+                      ),
                       leading: Icon(Icons.person),
                     );
                   }),
